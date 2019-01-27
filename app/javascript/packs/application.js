@@ -11,8 +11,12 @@ import Vue from 'vue/dist/vue.esm'
 import App from '../app.vue'
 
 document.addEventListener("turbolinks:load", function(){
+    // pega o primeiro elemento com o id #boards
     var element = document.querySelector("#boards")
+    // verifica se encontrou o elemento
     if ( element != undefined) {
+        // vincula a instancia do APP ao elemento que encontrou
+        // passa a list que esta na tag.div como paramentro para o app.vue
         const app = new Vue({
             el: element,
             data: {

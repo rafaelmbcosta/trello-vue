@@ -1,6 +1,11 @@
 <template>
   <div id="app">
-    <p>{{ message }}</p>
+    <div class="row">
+      
+      <div v-for="list in original_lists" class="col-3">
+        <h6>{{ list.name }}</h6>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -10,7 +15,8 @@ export default {
     return {
       message: "Hello Vue!"
     }
-  }
+  },
+  props: ["original_lists"]
 }
 </script>
 
